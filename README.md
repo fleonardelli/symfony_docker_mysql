@@ -25,7 +25,10 @@ New project:
 
 or
 
-pull your repository into `symfony/` folder.   
+Clone your repository:
+`git clone repoName .`
+
+and run `composer install`   
 
 ### Mysql
 
