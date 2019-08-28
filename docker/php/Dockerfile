@@ -1,7 +1,5 @@
 FROM alpine:3.9
 
-LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
-
 RUN apk add --update \
     php7-fpm \
     php7-apcu \
@@ -33,7 +31,9 @@ RUN apk add --update \
     make \
     curl \
     nodejs \
-    yarn
+    yarn 
+
+RUN apk add --no-cache git
 
 RUN rm -rf /var/cache/apk/* && rm -rf /tmp/* && \
     curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
